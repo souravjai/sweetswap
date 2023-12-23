@@ -1,0 +1,10 @@
+body{
+  background: 
+      linear-gradient(135deg,#0000 20.5%,#f9069a 0 29.5%,#0000 0) 0 14px,
+      linear-gradient( 45deg,#0000 8%,#f9069a 0 17%, #0000 0 58%) 28px 0,
+      linear-gradient(135deg,#0000 8%,#f9069a 0 17%, #0000 0 58%,#f9069a 0 67%,#0000 0),        
+      linear-gradient( 45deg,#0000 8%,#f9069a 0 17%, #0000 0 58%,#f9069a 0 67%,#0000 0 83%,#f9069a 0 92%,#0000 0),
+      #e4cc02;
+background-size: 56px 56px;
+
+}
