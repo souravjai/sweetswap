@@ -8,7 +8,7 @@ import gravity from '../utils/gravity'
 
 function Board() {
 
-    const { board, boardSize, shimmerCoordinates, isGravityActing } = useSelector(state => state.sweetSwap)
+    const { board, boardSize, shimmerCoordinates, isGravityActing ,wrongShimmer } = useSelector(state => state.sweetSwap)
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -48,6 +48,7 @@ function Board() {
                     row.map((candy, j) =>
                         <Tile
                             shimmering={shimmerCoordinates.some(coordinate => coordinate[0] === i && coordinate[1] === j)}
+                            wrongShimmer={wrongShimmer.some(coordinate => coordinate[0] === i && coordinate[1] === j)}
                             row={i}
                             col={j}
                             candy={candy}

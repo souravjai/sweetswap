@@ -20,10 +20,13 @@ const dragEndReducer = (state) => {
         newBoard[start_row][start_col] = state.board[end_row][end_col];
         newBoard[end_row][end_col] = state.board[start_row][start_col];
         const checkIfValidSwap = moveCheckLogic(newBoard)
-
         if (checkIfValidSwap) {
             state.board = newBoard;
+        } else {
+            state.wrongShimmer = [[start_row, start_col], [end_row, end_col]];
         }
+    } else {
+        state.wrongShimmer = [[start_row, start_col]];
     }
 
     state.swapStart = undefined;
