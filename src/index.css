@@ -1,2 +1,85 @@
 body{
+    background: 
+    linear-gradient(135deg,#0000 20.5%,#7c2cbb 0 29.5%,#0000 0) 0 50px,
+    linear-gradient( 45deg,#0000 8%,#7c2cbb 0 17%, #0000 0 58%) 100px 0,
+    linear-gradient(135deg,#0000 8%,#7c2cbb 0 17%, #0000 0 58%,#7c2cbb 0 67%,#0000 0),        
+    linear-gradient( 45deg,#0000 8%,#7c2cbb 0 17%, #0000 0 58%,#7c2cbb 0 67%,#0000 0 83%,#7c2cbb 0 92%,#0000 0),
+    white;
+background-size: 200px 200px;
+
+}
+
+#root{
+    background: rgba(237,250,205,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(237,250,205,0.25);
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    justify-content: center;
+
+}
+
+.game-arena{
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.board {
+    display: grid;
+    width: 90%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 500px;
+    padding: 1px;
+    border: 2px solid rebeccapurple;
+    border-radius: 10px;
+    background-color: white;
+    
+}
+.candy{
+    border: 1px solid rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+img{
+    width: 95%;
+    height: 95%;
+    filter: drop-shadow(2px 4px 6px grey);
+    object-fit: contain;
+}
+
+.top{
+    border-top: none;
+}
+.bottom{
+    border-bottom: none;
+}
+.left{
+    border-left:none;
+}
+.right{
+    border-right: none;
+}
+
+.candy:hover,.candy:active{
+    border-color: red;
+    border-width: 2px;
+    background-color: rgba(255, 0, 0, 0.342);
+    -webkit-user-drag: none;
+}
+
+.candy:hover{
+    cursor: grab;
+}
+.candy:active{
+    cursor: grabbing;
 }

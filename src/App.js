@@ -1,8 +1,11 @@
+import Board from "./components/Board"
 
 function App() {
   return (
     <div className="App">
-      App
+      <div className="game-arena">
+        <Board />
+      </div>
     </div>
   );
 }
