@@ -70,7 +70,7 @@ img{
     border-right: none;
 }
 
-.candy:hover,.candy:active{
+.candy:hover{
     border-color: red;
     border-width: 2px;
     background-color: rgba(255, 0, 0, 0.342);
