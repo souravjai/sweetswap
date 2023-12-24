@@ -22,7 +22,7 @@ const dragEndReducer = (state) => {
         const checkIfValidSwap = moveCheckLogic(newBoard)
 
         if (checkIfValidSwap) {
-            state.board = checkIfValidSwap;
+            state.board = newBoard;
         }
     }
 

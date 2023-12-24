@@ -6,7 +6,7 @@ import candyFive from "../assets/Candy (5).png"
 import candySix from "../assets/Candy (6).png"
 
 const candies = [
-    1, 2, 3, 4, 5, 6
+    1, 2, 3, 4, 5
 ]
 
 const mapper = (index) => {
