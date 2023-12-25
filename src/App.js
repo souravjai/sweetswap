@@ -1,11 +1,9 @@
-import Board from "./components/Board"
-import Home from "./components/Home";
+import AllRoutes from "./components/AllRoutes";
 
 function App() {
   return (
     <div className="App">
-      {/* <Board /> */}
-      {<Home />}
+      <AllRoutes />
     </div>
 
   );

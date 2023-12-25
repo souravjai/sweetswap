@@ -1,17 +1,30 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import initBoard from "../utils/initBoard"
-import { gravityActing, shimmer, updateBoard } from "../store/reducers/sweetSwapReducer"
+import { gravityActing, shimmer, updateBoard,setBoardSize } from "../store/reducers/sweetSwapReducer"
 import Tile from './Tile'
 import moveCheckLogic from '../utils/moveCheckLogic'
 import gravity from '../utils/gravity'
 
 import logo from "../assets/logo.png"
+import { useNavigate, useParams } from 'react-router'
 
 function Board() {
 
     const { board, boardSize, shimmerCoordinates, isGravityActing ,wrongShimmer,score } = useSelector(state => state.sweetSwap)
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const level = +useParams().level.replace("level=","");
+
+    if(level<6 || level >10){
+        alert("Aaiyen baigan!")
+        navigate("/");
+    }
+
+    useEffect(()=>{
+        dispatch(setBoardSize(level));
+    },[dispatch,level])
 
     useEffect(() => {
         dispatch(updateBoard(initBoard(boardSize)));

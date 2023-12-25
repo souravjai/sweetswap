@@ -24,6 +24,8 @@ Implementing the Drag and Drop feature presented its own set of challenges. Ensu
 ## Acknowledgments
 
 -   Thank you to the open-source community for providing valuable resources and inspiration.
+-   Major inspiration drawn from Candy Crush game available on playstore.
+-   Thanks to [Kumar Rohan](https://github.com/rohansah29) for giving me this challenge.
 
 Enjoy playing **Sweets Swap**! If you encounter any issues or have suggestions for improvement, feel free to open an issue or contribute to the project. Happy gaming! 
 

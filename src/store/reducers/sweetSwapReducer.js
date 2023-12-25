@@ -4,7 +4,7 @@ import shimmerAction from "./actions/shimmerAction";
 
 const initialState = {
     board: [],
-    boardSize: 11,
+    boardSize: 0,
     swapStart: undefined,
     swapWith: undefined,
     shimmerCoordinates: [],
@@ -17,6 +17,7 @@ const sweetSwapSlice = createSlice({
     name: "sweetSwapSlice",
     initialState,
     reducers: {
+        setBoardSize: (state, action) => { state.boardSize = action.payload },
         updateBoard: (state, action) => { state.board = action.payload; state.shimmerCoordinates = []; state.wrongShimmer = [] },
         onDragStart: (state, action) => { state.swapStart = action.payload; state.wrongShimmer = [] },
         onDragDrop: (state, action) => { state.swapWith = action.payload },
@@ -29,4 +30,4 @@ const sweetSwapSlice = createSlice({
 })
 
 export default sweetSwapSlice.reducer;
-export const { gravityActing, shimmer, updateBoard, onDragStart, onDragDrop, onDragEnd, updateScore, wrongShimmer } = sweetSwapSlice.actions;
+export const { gravityActing, shimmer, updateBoard, onDragStart, onDragDrop, onDragEnd, updateScore, wrongShimmer, setBoardSize } = sweetSwapSlice.actions;
