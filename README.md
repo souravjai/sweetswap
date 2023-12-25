@@ -1,7 +1,9 @@
 # Sweet Swap Game!
 ![Static Badge](https://img.shields.io/badge/@reduxjs/toolkit-2.0.1-purple) ![Static Badge](https://img.shields.io/badge/react-18.2.01-blue) ![Static Badge](https://img.shields.io/badge/react--redux-9.0.4-green)
 
-Welcome to **Sweets Swap**, a candy-crushing game built with React, @redux-toolkit, and react-router-dom. This game features a dynamic gameplay experience with candies falling due to gravity after explosions and a customizable board size.
+Welcome to **Sweets Swap**, a candy-crushing game built with React, @redux-toolkit, and react-router-dom. This game features a dynamic gameplay experience with candies falling due to gravity after explosions and a customizable board size. 
+
+This Website is deployed on Vercel, [Play Game](https://sweetswap-nu.vercel.app/). 🚀
 
  
 
