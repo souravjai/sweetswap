@@ -18,6 +18,7 @@ const sweetSwapSlice = createSlice({
     initialState,
     reducers: {
         setBoardSize: (state, action) => { state.boardSize = action.payload },
+        resetScore: (state) => { state.score = 0 },
         updateBoard: (state, action) => { state.board = action.payload; state.shimmerCoordinates = []; state.wrongShimmer = [] },
         onDragStart: (state, action) => { state.swapStart = action.payload; state.wrongShimmer = [] },
         onDragDrop: (state, action) => { state.swapWith = action.payload },
@@ -30,4 +31,4 @@ const sweetSwapSlice = createSlice({
 })
 
 export default sweetSwapSlice.reducer;
-export const { gravityActing, shimmer, updateBoard, onDragStart, onDragDrop, onDragEnd, updateScore, wrongShimmer, setBoardSize } = sweetSwapSlice.actions;
+export const { gravityActing, shimmer, updateBoard, onDragStart, onDragDrop, onDragEnd, updateScore, wrongShimmer, setBoardSize, resetScore } = sweetSwapSlice.actions;

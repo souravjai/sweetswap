@@ -21,3 +21,11 @@ header{
 .game-arena{
     margin-top: -10px;
 }
+
+.levels{
+    width: unset;
+}
+
+.btn{
+    padding: 5px;
+}

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import initBoard from "../utils/initBoard"
-import { gravityActing, shimmer, updateBoard,setBoardSize } from "../store/reducers/sweetSwapReducer"
+import { gravityActing, shimmer, updateBoard,setBoardSize,resetScore } from "../store/reducers/sweetSwapReducer"
 import Tile from './Tile'
 import moveCheckLogic from '../utils/moveCheckLogic'
 import gravity from '../utils/gravity'
@@ -28,6 +28,7 @@ function Board() {
 
     useEffect(() => {
         dispatch(updateBoard(initBoard(boardSize)));
+        dispatch(resetScore());
     }, [boardSize, dispatch])
 
 
