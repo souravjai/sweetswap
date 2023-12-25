@@ -8,6 +8,9 @@ const dragEndReducer = (state) => {
     let [end_row, end_col] = [+state.swapWith?.getAttribute("candy-row"),
     +state.swapWith.getAttribute("candy-col")]
 
+    if (start_row === end_row && start_col === end_col)
+        return;
+
     const valid_moves = [
         [start_row - 1, start_col],
         [start_row + 1, start_col],
