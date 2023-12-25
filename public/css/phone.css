@@ -1,0 +1,23 @@
+body{
+    background-image: url("../backgrounds/mb-candy-bg.jpg");
+    background-size: cover;
+}
+
+.App{
+    width: unset;
+}
+
+header{
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    height: 30vh;
+}
+
+.logo{
+    height: 120px;
+}
+
+.game-arena{
+    margin-top: -10px;
+}

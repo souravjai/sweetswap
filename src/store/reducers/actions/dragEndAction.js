@@ -1,4 +1,4 @@
-import moveCheckLogic from "../../utils/moveCheckLogic";
+import moveCheckLogic from "../../../utils/moveCheckLogic";
 
 const dragEndReducer = (state) => {
     if (!state.swapStart || !state.swapWith) return;

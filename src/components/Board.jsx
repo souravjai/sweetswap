@@ -6,9 +6,11 @@ import Tile from './Tile'
 import moveCheckLogic from '../utils/moveCheckLogic'
 import gravity from '../utils/gravity'
 
+import logo from "../assets/logo.png"
+
 function Board() {
 
-    const { board, boardSize, shimmerCoordinates, isGravityActing ,wrongShimmer } = useSelector(state => state.sweetSwap)
+    const { board, boardSize, shimmerCoordinates, isGravityActing ,wrongShimmer,score } = useSelector(state => state.sweetSwap)
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -40,6 +42,15 @@ function Board() {
     }, [board, dispatch,isGravityActing])
 
     return (
+        <>
+        <header>
+        <div className="logo">
+            <img src={logo} alt="logo"/>
+        </div>
+        <div className="score">
+            <span id="first-text" >Score: </span><span id="second-text"> {score}</span></div>
+        </header>
+        <div className="game-arena">
         <div className="board" style={{
             gridTemplate: `repeat(${boardSize},${100 / boardSize}%)/repeat(${boardSize},${100 / boardSize}%)`
         }}>
@@ -57,6 +68,8 @@ function Board() {
                         />))
             }
         </div>
+        </div>
+        </>
     )
 }
 
